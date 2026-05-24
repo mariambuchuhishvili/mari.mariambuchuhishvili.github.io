@@ -79,7 +79,7 @@ function send(){
 const tg = window.Telegram.WebApp;
 tg.expand();
 let text = cart.map(item => `${item.name} ${item.price}`).join("\n");
-text += `Итоговая стоимость: ${total}`;
+text += `\nИтоговая стоимость: ${total}`;
 tg.sendData(text);
 clearCart();
 }
